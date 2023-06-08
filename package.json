@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "HOST=0.0.0.0 nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@auth0/auth0-vue": "^2.2.0",
+    "@iconify-json/carbon": "^1.1.16",
+    "@iconify-json/mdi": "^1.1.50",
+    "@unocss/nuxt": "^0.51.4",
+    "nuxt": "^3.4.0",
+    "sass": "^1.60.0"
+  },
+  "dependencies": {
+    "@bulvar/buefy": "^0.11.13",
+    "@bulvar/bulma": "^0.11.13"
+  }
+}

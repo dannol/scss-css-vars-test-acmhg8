@@ -1,0 +1,13 @@
+.i-spin {
+  animation: i-spin 2s infinite linear;
+}
+
+@keyframes i-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}

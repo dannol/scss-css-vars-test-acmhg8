@@ -1,0 +1,48 @@
+@use 'sass:string';
+
+@function use-var($var, $fallback: null) {
+  @if ($fallback) {
+    @return var(format-var($var), $fallback);
+  }
+  @return var(format-var($var));
+}
+
+@function format-var($var) {
+  @if (string.slice($var, 1, 2) == '--') {
+    @return #{$var};
+  }
+  @return --#{$var};
+}
+
+@function combine-rgb(
+  $rVar,
+  $gVar,
+  $bVar,
+  $rFallback: 0,
+  $gFallback: 0,
+  $bFallback: 0
+) {
+  @return rgb(
+    use-var($rVar, $rFallback),
+    use-var($gVar, $gFallback),
+    use-var($bVar, $bFallback)
+  );
+}
+
+@function combine-rgba(
+  $rVar,
+  $gVar,
+  $bVar,
+  $aVar,
+  $rFallback: 0,
+  $gFallback: 0,
+  $bFallback: 0,
+  $aFallback: 0
+) {
+  @return rgba(
+    use-var($rVar, $rFallback),
+    use-var($gVar, $gFallback),
+    use-var($bVar, $bFallback),
+    use-var($aVar, $aFallback)
+  );
+}
