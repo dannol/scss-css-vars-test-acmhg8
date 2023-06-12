@@ -46,22 +46,22 @@ export const useUser = () => {
     try {
       isLoggingIn.value = true;
 
-      const result = await auth0.value.loginWithRedirect({
-        authorizationParams: {
-          login_hint: userNameHint,
-          connection: 'alterra-test-social', //connectionName.value || '', //'alterra-test-social', //connectionName.value || '',
-          //organization: organizationName.value,
-        },
-      });
-      // const result = await auth0.value.loginWithPopup({
+      // const result = await auth0.value.loginWithRedirect({
       //   authorizationParams: {
       //     login_hint: userNameHint,
-      //     connection: 'alterra-test-social', //connectionName.value || '',
-      //     organization: organizationName.value,
-      //     // audience: 'alterra-guest-api',
+      //     connection: 'alterra-test-social', //connectionName.value || '', //'alterra-test-social', //connectionName.value || '',
+      //     //organization: organizationName.value,
       //   },
       // });
-      console.log('Login result', result);
+      // // const result = await auth0.value.loginWithPopup({
+      // //   authorizationParams: {
+      // //     login_hint: userNameHint,
+      // //     connection: 'alterra-test-social', //connectionName.value || '',
+      // //     organization: organizationName.value,
+      // //     // audience: 'alterra-guest-api',
+      // //   },
+      // // });
+      // console.log('Login result', result);
     } finally {
       isLoggingIn.value = false;
     }
