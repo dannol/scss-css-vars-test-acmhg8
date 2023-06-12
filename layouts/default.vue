@@ -56,8 +56,8 @@ function showSignInModal() {
 }
 
 function signOutClicked() {
-  window.location =
-    // 'https://login.qa.alterramtnco.com/logout?client_id=7zJ1JqPzEVui0fkNN5BTie6zXhxmU5IO&returnTo=https://logindev.aspenware.net/v2/logout?client_id=UoHCscMvs3xpHLguNW7BjI64h4Qo0UBl';
+  // window.location =
+  // 'https://login.qa.alterramtnco.com/logout?client_id=7zJ1JqPzEVui0fkNN5BTie6zXhxmU5IO&returnTo=https://logindev.aspenware.net/v2/logout?client_id=UoHCscMvs3xpHLguNW7BjI64h4Qo0UBl';
 
   return user.logout({
     client_id: 'UoHCscMvs3xpHLguNW7BjI64h4Qo0UBl',
